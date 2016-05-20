@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WebshareModule" >
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="pragma" content="no-cache"  />
+	<meta http-equiv="content-type" content="no-cache, must-revalidate" />
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta http-equiv="expires" content="0"/>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<title>快牙网传</title>
+	<link rel="stylesheet" type="text/css" href="plugin/uikit-2.22.0/css/uikit.min.css">
+	<link rel="stylesheet" type="text/css" href="c/style.css">
+</head>
+<body>
+	<div class="zapya-container">
+		<div class="sidebar-menu large">
+			<div id="logo-env"><img src="i/logo.png" class="logo-img" / ><span class="nav-title">快牙网传</span></div>
+			<ul class="sidebar-menu-main" data-uk-switcher="{connect:'#all-contents',animation: 'fade'}">
+			    <li>
+			    	<i class="linecons-con uk-icon-photo"></i>
+			    	<span class="nav-title">图片</span>
+			    </li>
+				<li>
+					<i class="linecons-con uk-icon-film"></i>
+			    	<span class="nav-title">视频</span>
+				</li>
+				<li>
+					<i class="linecons-con uk-icon-music"></i>
+			    	<span class="nav-title">音乐</span>
+				</li>
+				<li>
+					<i class="linecons-con uk-icon-th"></i>
+			    	<span class="nav-title">应用</span>
+				</li>
+				<li>
+				    <i class="linecons-con uk-icon-folder-open"></i>
+			    	<span class="nav-title">文件</span>
+				</li>
+				<li>
+					<i class="linecons-con uk-icon-camera"></i>
+			    	<span class="nav-title">相机</span>
+				</li>
+			</ul>
+		</div><!--sidebar-menu end-->
+		<div class="main-content">
+			<div class="head-bar" ng-controller="HomeController">
+				<i class="uk-icon-bars" id="toggle-nav-i"></i>
+				<ul class='info-menu'>
+					<li class="info-menu-li">
+						<div class="blue-line"></div>
+						<div class="info-menu-icon-container">
+							<i class="uk-icon-clipboard info-menu-icon"></i>
+						</div>
+						<div class="info-menu-content">
+							
+						</div>
+					</li>
+					<li class="info-menu-li">
+					    <div class="blue-line"></div>
+						<div class="info-menu-icon-container">
+							<i class="uk-icon-envelope info-menu-icon"></i>
+						</div>
+						<div class="info-menu-content">
+							
+						</div>
+					</li>
+				</ul>
+			</div><!--head-bar end-->
+			<div class="content-panel">
+				<ul id="all-contents" class="uk-switcher">
+					<li class="panel-li" data-panel="image">
+						<div class="panel-head">
+							
+						</div>
+					</li>
+					<li class="panel-li" data-panel="video"></li>
+					<li class="panel-li" data-panel="audio"></li>
+					<li class="panel-li" data-panel="app"></li>
+					<li class="panel-li" data-panel="document"></li>
+					<li class="panel-li" data-panel="camera"></li>
+				</ul>
+				<div class="home-contents">
+					
+				</div>
+			</div>
+		</div><!--main-content-->
+	</div><!--zapya-container end-->
+	<!-- processing begin -->
+	<div id="processing" style="display:none;" class="animated zoomIn">
+		<div class="processing-head">
+		    <div class="closeBtn" onclick="$('#processing').attr('class','animated zoomOut');setTimeout(function(){$('#processing').hide();},500);"><i class="uk-icon-close"></i></div>
+		    </div>
+		<div class="processing-body">
+		    <span class="processing-icon"><i class=""></i></span>
+		    <span class="processing-text"></span>
+		</div>
+		<div class="processing-foot" style="display:none">
+		    <button class="cancel" style="display:none"></button>
+		    <button class="commit" style="display:none"></button>
+		</div>
+	</div><!-- processing end -->
+	<script src="plugin/jquery-1.11.3.min.js"></script>
+	<script src="plugin/uikit-2.22.0/js/uikit.min.js"></script>
+	<script src="j/lang-1.0.3.js"></script>
+	<script src="j/zapya.js"></script>
+	<script src="plugin/angular.min.js"></script>
+	<script src="j/pc-js/homeController.js"></script>
+</body>
+</html>
